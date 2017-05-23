@@ -1,0 +1,56 @@
+<html>
+<head>
+<title> Crop Image </title>
+<link href="css/Jcrop.css" rel="stylesheet" type="text/css" /> 
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" /> 
+<script type='text/javascript' src='js/jquery.js'></script>
+<script type='text/javascript' src='js/bootstrap.min.js'></script>
+<script type='text/javascript' src='js/Jcrop.js'></script>
+<script type='text/javascript' src='js/myjs.js'></script>
+</head>
+<body>
+<h1>Image Crop and Preview</h1>
+
+	<div class="form-group">
+		<form >
+			<input type="file" name="img" id="img">
+		</form>
+	</div>
+	<div id="imageList"></div>
+
+
+
+
+	<div id="myModal" class="modal fade" role="dialog" >
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Upload Image</h4>
+                </div>
+                <form  method="post" onsubmit="return checkCoords();" id="imageCropForm">
+                    <div class="modal-body" style="overflow:scroll;">
+                        <div class="form-group">
+                            <img src="" id="cropbox" />
+                            <input type="hidden" id="x" name="x" />
+                            <input type="hidden" id="y" name="y" />
+                            <input type="hidden" id="w" name="w" />
+                            <input type="hidden" id="h" name="h" />
+                            <input type="hidden" id="rowImageData" name="rowImageData" />
+                        </div> 
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-success" >Crop Image</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    
+</body>
+</html>
